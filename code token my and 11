@@ -1,0 +1,40 @@
+https://thirdweb.com/unichain-sepolia-testnet/0x0Da6c93d0fC4BFf93C663cC86898dB63507027bf/explorer
+
+
+import { readContract } from "thirdweb";
+
+const data = await readContract({
+  contract,
+  method: "function CLOCK_MODE() view returns (string)",
+  params: []
+})
+
+
+burn 
+import { prepareContractCall, sendTransaction } from "thirdweb";
+
+const transaction = await prepareContractCall({
+  contract,
+  method: "function burn(uint256 amount)",
+  params: [amount]
+});
+const { transactionHash } = await sendTransaction({
+  transaction,
+  account
+});
+
+import { createThirdwebClient, getContract } from "thirdweb";
+import { defineChain } from "thirdweb/chains";
+
+// create the client with your clientId, or secretKey if in a server environment
+const client = createThirdwebClient({
+  clientId: "YOUR_CLIENT_ID"
+ });
+over token code
+
+// connect to your contract
+const contract = getContract({
+  client,
+  chain: defineChain(660279),
+  address: "0xDCb313BC098b5b2A315EcAC5c3f3eAa6ddCd34E4"
+});
